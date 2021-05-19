@@ -20,12 +20,19 @@
             // }
             data() {
                 return {
-                    name: 'xxx'
+                    name: 'xxx',
+                    c: {
+                        a: 1
+                    },
+                    d: [{name: 1}, {name: 2}]
                 }
             }
         });
-
-        console.log(vm );
+        vm.d[0].name = 'xxxxxx';
+        // 数组不监控索引的变化  但是索引对应的是对象  需要被监控
+        // vm.name ====> vm._data.name;
+        vm.d.push({name: 4});
+        console.log(vm.d,  'ds====>');
     </script>
 </body>
 </html>
