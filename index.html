@@ -8,7 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app"> {{name}} </div>
+    <div id="app" class="xxx">
+        {{name}}
+        <span>144552</span>
+        <p>1234</p>
+    </div>
     <script src="dist/vue.js"></script>
     <script>
         // viewModel
@@ -32,7 +36,6 @@
         // 数组不监控索引的变化  但是索引对应的是对象  需要被监控
         // vm.name ====> vm._data.name;
         vm.d.push({name: 4});
-        console.log(vm.d,  'ds====>');
     </script>
 </body>
 </html>
