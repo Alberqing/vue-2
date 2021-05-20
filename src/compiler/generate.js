@@ -54,7 +54,7 @@ function genChildren(el) {
     return false
 }
 
-// html字符串 =》  字符串 _c('div', {id: 'app'}, 'hello')
+// html字符串 =>  字符串 _c('div', {id: 'app'}, 'hello')
 export function generate(el) {  // _c('div')
 
     // 遍历树 将树拼接成字符串
@@ -63,7 +63,9 @@ export function generate(el) {  // _c('div')
 
     let code = `_c('${el.tag}', ${
         el.attrs.length ? genProps(el.attrs) : 'undefined'
-    })${children ? `,${children}` : ''}`;
+    }${
+        children ? `,${children}` : ''
+    })`;
 
     return code
 }
